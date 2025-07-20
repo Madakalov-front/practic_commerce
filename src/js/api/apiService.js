@@ -18,7 +18,6 @@ export const fetchProducts = async () => {
     if (snapshot.exists()) {
       return Object.values(snapshot.val()); // Преобразуем объект в массив
     } else {
-      console.log("No products available");
       return [];
     }
   } catch (error) {

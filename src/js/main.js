@@ -68,7 +68,6 @@ const initApp = async () => {
             const targetParent = e.currentTarget.closest('.card-product');
             const productId = Number(targetParent.dataset.cardId);
             const product = products.find(p => p.id === productId);
-            console.log(productId)
             if (product) {
                 cart.addItem(product);
             }

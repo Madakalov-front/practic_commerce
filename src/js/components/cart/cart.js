@@ -73,8 +73,6 @@ export const createCart = () => {
 
     // Обновление UI корзины
     const updateCart = () => {
-        // Здесь будем обновлять интерфейс
-        console.log('Корзина обновлена:', items);
         renderCartModal();
     };
 
@@ -138,7 +136,6 @@ export const createCart = () => {
 
     // Обработчики событий для корзины
     const addCartEventListeners = () => {
-        console.log('init add')
         document.querySelectorAll('.card-product-cart__counter-minus').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const targetParent = e.currentTarget.closest('.card-product-cart');

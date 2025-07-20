@@ -1,18 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "vite.config.js",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
-    },
-    {
-      "src": "db.json",
-      "use": "@vercel/json-server"
-    }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api" },
-    { "src": "/(.*)", "dest": "/dist/$1" }
-  ]
+    "version": 2,
+    "builds": [
+        { "src": "vite.config.js", "use": "@vercel/static-build" },
+        { "src": "api/**/*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+        { "src": "/api/(.*)", "dest": "/api/$1" },
+        {
+            "src": "/(.*)",
+            "dest": "/$1",
+            "headers": { "Cache-Control": "s-maxage=3600" }
+        }
+    ]
 }

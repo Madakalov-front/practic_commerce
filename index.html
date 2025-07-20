@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/src/assets/styles/index.scss" />
+        <title>Vite App</title>
+    </head>
+
+    <body>
+        <!-- START HEADER -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <button class="header__burger">
+                        <svg>
+                            <use href="#icon-burger"></use>
+                        </svg>
+                    </button>
+                    <a href="/" class="logo"
+                        ><img src="/images/icon/logo.svg" alt
+                    /></a>
+                    <!-- nav--show -->
+                    <nav class="nav">
+                        <button class="nav__close">
+                            <svg>
+                                <use href="#icon-close"></use>
+                            </svg>
+                        </button>
+                        <a href="#!">Продукты</a>
+                        <a href="#!">Цвета</a>
+                        <a href="#!">Вдохновение</a>
+                        <a href="#!">Советы</a>
+                        <a href="#!">Найти магазин</a>
+                    </nav>
+                    <div class="header__contact">
+                        <a href="tel:+7(495)221-77-69">+7 (495) 221-77-69</a>
+                        <button type="button">Заказать звонок</button>
+                    </div>
+                    <div class="header__actions">
+                        <div class="search">
+                            <div class="filed" style="display: none">
+                                <input
+                                    type="search"
+                                    name="search"
+                                    id="search"
+                                />
+                            </div>
+                            <button>
+                                <svg class="icon-header">
+                                    <use href="#icon-search"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="profile">
+                            <a href="#!">
+                                <svg class="icon-header">
+                                    <use href="#icon-user"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="favorites">
+                            <a href="#!">
+                                <svg class="icon-header">
+                                    <use href="#icon-favorite"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <!-- cart--has-product  -->
+                        <div class="cart">
+                            <button id="open-cart" data-count-product="4">
+                                <svg class="icon-header">
+                                    <use href="#icon-cart"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bread-links">
+                    <a href="/">Главная</a><a href="#!">Продукты</a
+                    ><a href="#!">Краски</a>
+                </div>
+            </div>
+            <div class="header__banner">
+                <div class="swiper swiper-banner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div
+                                class="card-banner"
+                                style="
+                                    background-image: url(/images/picture/card-banner.png);
+                                "
+                            >
+                                <h2>Краски</h2>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="card-banner"
+                                style="
+                                    background-image: url(/images/picture/card-banner.png);
+                                "
+                            >
+                                <h2>Краски</h2>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="card-banner"
+                                style="
+                                    background-image: url(/images/picture/card-banner.png);
+                                "
+                            >
+                                <h2>Краски</h2>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="card-banner"
+                                style="
+                                    background-image: url(/images/picture/card-banner.png);
+                                "
+                            >
+                                <h2>Краски</h2>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="card-banner"
+                                style="
+                                    background-image: url(/images/picture/card-banner.png);
+                                "
+                            >
+                                <h2>Краски</h2>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="card-banner"
+                                style="
+                                    background-image: url(/images/picture/card-banner.png);
+                                "
+                            >
+                                <h2>Краски</h2>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="card-banner"
+                                style="
+                                    background-image: url(/images/picture/card-banner.png);
+                                "
+                            >
+                                <h2>Краски</h2>
+                                <p>
+                                    Идеально подходят для стен и других
+                                    поверхностей. Найди свой идеальный цвет!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-navigation">
+                        <button class="swiper-button-prev">
+                            <svg class="swiper-arrow">
+                                <use href="#icon-chevron-left"></use>
+                            </svg>
+                        </button>
+                        <button class="swiper-button-next">
+                            <svg class="swiper-arrow">
+                                <use href="#icon-chevron-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER -->
+
+        <!-- START MAIN -->
+        <main class="catalog-page">
+            <div class="container">
+                <section class="catalog">
+                    <aside class="catalog__aside">
+                        <button id="close-filter"></button>
+                        <ul class="category-list">
+                            <li>
+                                <div class="category-checkbox">
+                                    <label
+                                        ><input
+                                            type="checkbox"
+                                            data-checkbox-category="new"
+                                    /></label>
+                                    <span>Новинки</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="category-checkbox">
+                                    <label
+                                        ><input
+                                            type="checkbox"
+                                            data-checkbox-category="inStock"
+                                    /></label>
+                                    <span>Есть в наличии</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="category-checkbox">
+                                    <label
+                                        ><input
+                                            type="checkbox"
+                                            data-checkbox-category="contract"
+                                    /></label>
+                                    <span>Контрактные</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="category-checkbox">
+                                    <label
+                                        ><input
+                                            type="checkbox"
+                                            data-checkbox-category="exclusive"
+                                    /></label>
+                                    <span>Эксклюзивные</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="category-checkbox">
+                                    <label
+                                        ><input
+                                            type="checkbox"
+                                            data-checkbox-category="sale"
+                                    /></label>
+                                    <span>Распродажа</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                    <section class="catalog__product">
+                        <h1 class="catalog__title">Краски</h1>
+                        <div class="catalog__sorted">
+                            <div class="count-product">
+                                <span>412</span> товаров
+                            </div>
+                            <div class="sorted-wrapper">
+                                <button id="open-filter">Фильтры</button>
+                                <div class="sort-dropdown">
+                                    <button class="sort-dropdown__toggle">
+                                        Сортировка
+                                        <span class="sort-dropdown__arrow"
+                                            >▼</span
+                                        >
+                                    </button>
+                                    <ul class="sort-dropdown__menu">
+                                        <li data-sort="expensive">
+                                            Сначала дорогие
+                                        </li>
+                                        <li data-sort="cheap">
+                                            Сначала недорогие
+                                        </li>
+                                        <li data-sort="popular">
+                                            Сначала популярные
+                                        </li>
+                                        <li data-sort="new">Сначала новые</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cards-container"></div>
+                    </section>
+                </section>
+            </div>
+        </main>
+        <!-- END MAIN -->
+
+        <!-- START CART -->
+        <div class="cart-modal">
+            <div class="cart-modal__action">
+                <h2 class="cart-modal__title">Корзина</h2>
+                <button class="cart-modal__close">
+                    <svg>
+                        <use href="#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-modal__top">
+                <span class="cart-modal__count">4 товара</span
+                ><button class="cart-modal__clear">очистить список</button>
+            </div>
+            <ul class="cart-modal__list"></ul>
+            <div class="cart-modal__footer">
+                <div class="cart-modal__total">
+                    <span>итого</span>
+                    <!-- total -->
+                    <p></p>
+                </div>
+                <button class="cart-modal__order">Оформить заказ</button>
+            </div>
+        </div>
+        <!-- END CART -->
+
+        <div class="body-overlay"></div>
+
+        <footer class="footer"></footer>
+
+        <!-- SPRITE START -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="visually-hidden">
+            <symbol id="icon-search" viewBox="0 0 20 20" fill="none">
+                <path
+                    d="M9.16667 15.8333C12.8486 15.8333 15.8333 12.8486 15.8333 9.16667C15.8333 5.48477 12.8486 2.5 9.16667 2.5C5.48477 2.5 2.5 5.48477 2.5 9.16667C2.5 12.8486 5.48477 15.8333 9.16667 15.8333Z"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M17.5 17.5L13.875 13.875"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+            <symbol id="icon-user" viewBox="0 0 22 22" fill="none">
+                <g clip-path="url(#clip0_8_30)">
+                    <circle cx="11" cy="23" r="8.4" stroke-width="1.2" />
+                    <circle cx="11" cy="7" r="3.4" stroke-width="1.2" />
+                </g>
+                <defs>
+                    <clippath id="clip0_8_30">
+                        <rect width="22" height="22" fill="white" />
+                    </clippath>
+                </defs>
+            </symbol>
+            <symbol id="icon-favorite" viewBox="0 0 22 22" fill="none">
+                <path
+                    d="M11.0009 19C10.745 19.0001 10.4978 18.9074 10.3052 18.739C9.57966 18.1047 8.87674 17.5067 8.25817 16.9802C6.65691 15.7048 5.16127 14.3023 3.78581 12.7865C2.67695 11.5918 2.0423 10.0341 2.00085 8.4053C1.97621 6.99164 2.48598 5.62067 3.42845 4.56595C3.88583 4.0681 4.44256 3.67154 5.06275 3.40184C5.68294 3.13214 6.35283 2.9953 7.0292 3.00012C8.05552 2.99541 9.053 3.3392 9.8581 3.97514C10.2942 4.31625 10.6791 4.71815 11.0009 5.16854C11.3231 4.71841 11.7082 4.31682 12.1446 3.97605C12.9489 3.34036 13.9453 2.99628 14.9708 3.00012C15.6472 2.9953 16.3171 3.13214 16.9372 3.40184C17.5574 3.67154 18.1142 4.0681 18.5715 4.56595C19.514 5.62067 20.0238 6.99164 19.9991 8.4053C19.9585 10.0337 19.3249 11.5915 18.2169 12.7865C16.8425 14.3013 15.3481 15.7028 13.7482 16.9775C13.1287 17.5049 12.4267 18.1029 11.6975 18.7399C11.5045 18.9081 11.257 19.0005 11.0009 19V19Z"
+                    stroke-width="1.2"
+                />
+            </symbol>
+            <symbol
+                id="icon-cart"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 48 48"
+            >
+                <path
+                    d="M15 39a3 3 0 1 0 3-3 3 3 0 0 0-3 3zm4 0a1 1 0 1 1-1-1 1 1 0 0 1 1 1zM31 39a3 3 0 1 0 3-3 3 3 0 0 0-3 3zm4 0a1 1 0 1 1-1-1 1 1 0 0 1 1 1z"
+                />
+                <circle cx="28.55" cy="20.55" r="1.45" />
+                <path
+                    d="M23.45 16.9A1.45 1.45 0 1 0 22 15.45a1.45 1.45 0 0 0 1.45 1.45zM23 22a1 1 0 0 0 .71-.29l6-6a1 1 0 0 0-1.42-1.42l-6 6a1 1 0 0 0 0 1.42A1 1 0 0 0 23 22z"
+                />
+                <path
+                    d="M7 10a1 1 0 0 0 1-1 1 1 0 0 1 1-1h2.26l5.4 17.27 1.38 5A1 1 0 0 0 19 31h13a1 1 0 0 1 0 2H20a1 1 0 0 0 0 2h12a3 3 0 0 0 0-6H19.76l-.83-3h13.54a6.92 6.92 0 0 0 3.58-1 7 7 0 0 0 3-3.46 6.45 6.45 0 0 0 .21-.62L42 11.27a1 1 0 0 0-.16-.87A1 1 0 0 0 41 10H14l-1-3.3a1 1 0 0 0-1-.7H9a3 3 0 0 0-3 3 1 1 0 0 0 1 1zm32.67 2L38 18l-.68 2.37A5 5 0 0 1 32.47 24H18.36l-1.87-6-1.88-6z"
+                />
+            </symbol>
+            <symbol id="icon-close" viewBox="0 0 24 24">
+                <path
+                    d="M18 6L6 18"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M6 6L18 18"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+            <symbol id="icon-burger" viewBox="0 0 24 14">
+                <rect width="24" height="2" />
+                <rect y="6" width="24" height="2" />
+                <rect y="12" width="24" height="2" />
+            </symbol>
+            <symbol id="icon-chevron-left" viewBox="0 0 80 80" fill="none">
+                <path
+                    d="M50 20L30 40L50 60"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+            <symbol id="icon-chevron-right" viewBox="0 0 80 80" fill="none">
+                <path
+                    d="M30 60L50 40L30 20"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+            <symbol id="icon-plus" viewBox="0 0 20 20" fill="none">
+                <path
+                    d="M10 4.16663V15.8333"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M4.16699 10H15.8337"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+            <symbol id="icon-minus" viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M3.3335 8H12.6668"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+            <symbol id="icon-reload" viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M17 1L21 5L17 9"
+                    stroke="black"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M3 11V9C3 7.93913 3.42143 6.92172 4.17157 6.17157C4.92172 5.42143 5.93913 5 7 5H21"
+                    stroke="black"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M7 23L3 19L7 15"
+                    stroke="black"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+                <path
+                    d="M21 13V15C21 16.0609 20.5786 17.0783 19.8284 17.8284C19.0783 18.5786 18.0609 19 17 19H3"
+                    stroke="black"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </symbol>
+        </svg>
+        <!-- SPRITE END -->
+        <script type="module" src="/src/js/main.js"></script>
+    </body>
+</html>

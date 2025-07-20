@@ -1,0 +1,24 @@
+:root {
+    // colors
+    --dark: #1f2020;
+    --dark-a10: rgba(0,0,0, .1);
+    --dark-a70: rgba(0,0,0, .7);
+    --dark-a06: rgba(31, 32, 32, 0.06);
+    --green: #7bb899;
+    --grey: #c4c4c4;
+    --grey-100: #F2F2F2;
+    --light: #fff;
+
+    // transition
+    --duration: 0.2s;
+    --ease: ease;
+}
+
+// breakpoints
+$desktop: 1920px;
+$laptop: 1440px;
+$tablet-xl: 1280px;
+$tablet: 991px;
+$mobile-xl: 640px;
+$mobile: 572px;
+$mobil-s: 425px;

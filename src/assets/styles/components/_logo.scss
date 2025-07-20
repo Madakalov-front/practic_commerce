@@ -1,0 +1,16 @@
+@use '../global' as *;
+
+
+.logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: toRem(99);
+    height: toRem(21);
+    @include MQmin($tablet) {
+        width: toRem(131);
+        height: toRem(26);
+        margin-right: clamp(toRem(0), 3.125vw, toRem(60));
+    }
+}

@@ -1,0 +1,7 @@
+@use "../global" as *;
+
+.profile {
+    @include MQmax($tablet-xl) {
+        display: none;
+    }
+}

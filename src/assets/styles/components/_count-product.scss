@@ -1,0 +1,11 @@
+@use '../global' as *;
+
+.count-product {
+    font-size: toRem(12);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: toRem(.72);
+    @include MQmax($tablet-xl) {
+        display: none;
+    }
+}

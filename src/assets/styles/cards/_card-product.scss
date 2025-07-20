@@ -1,0 +1,117 @@
+@use "../global" as *;
+
+.card-product {
+    padding-bottom: toRem(34);
+    border-bottom: toRem(1) solid var(--dark-a10);
+    @include MQmin($tablet-xl) {
+        padding-bottom: toRem(14);
+    }
+    @include hover {
+        img {
+            opacity: 0;
+            visibility: hidden;
+            &:first-of-type {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        @include MQmin($tablet-xl) {
+            .card-product__button {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    // .card-product__gallery
+
+    &__gallery {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: toRem(156);
+        width: 100%;
+        aspect-ratio: 1;
+        margin-bottom: toRem(16);
+        @include MQmin($tablet-xl) {
+            min-width: toRem(278);
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+            transition-property: opacity, visibility;
+            transition-duration: var(--duration);
+            transition-timing-function: var(--ease);
+            &:first-of-type {
+                opacity: 0;
+                visibility: hidden;
+                object-fit: cover;
+            }
+        }
+    }
+
+    // .card-product__title
+
+    &__title {
+        font-size: toRem(16);
+        font-weight: 300;
+        line-height: 1.12;
+        letter-spacing: toRem(0.32);
+        margin-bottom: toRem(24);
+        @include line-clamp(2);
+    }
+
+    // .card-product__footer
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: toRem(12);
+    }
+
+    // .card-product__price
+
+    &__price {
+        font-weight: 600;
+        font-size: toRem(16);
+        line-height: 1;
+    }
+
+    // .card-product__button
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: toRem(8);
+        padding: toRem(4) toRem(12);
+        background-color: var(--grey-100);
+        @include MQmin($tablet-xl) {
+            padding: toRem(6) toRem(30);
+            background: var(--green);
+            opacity: 0;
+            visibility: hidden;
+            transition-property: opacity, visibility;
+            transition-duration: var(--duration);
+            transition-timing-function: var(--ease);
+        }
+        svg {
+            width: toRem(16);
+            height: toRem(16);
+            stroke: var(--dark);
+            @include MQmin($tablet-xl) {
+                width: toRem(20);
+                height: toRem(20);
+            }
+        }
+    }
+}

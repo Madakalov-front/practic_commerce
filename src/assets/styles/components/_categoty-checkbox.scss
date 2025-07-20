@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.category-checkbox {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(12);
+
+    label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: toRem(36);
+        height: toRem(22);
+        border-radius: toRem(11);
+        padding-inline: toRem(6);
+        background-color: var(--grey-100);
+        cursor: pointer;
+        transition-property: background-color,justify-content;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--ease);
+        &::after {
+            content: "";
+            display: block;
+            width: toRem(9);
+            height: toRem(9);
+            border-radius: 50%;
+            background-color: var(--dark);
+        }
+        &:has(:checked) {
+            background-color: var(--green);
+            justify-content: flex-end;
+        }
+    }
+
+    input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        clip-path: inset(-1px);
+        opacity: 0;
+    }
+
+    span {
+        font-size: toRem(12);
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: toRem(.72);
+
+    }
+}

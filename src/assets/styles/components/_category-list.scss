@@ -1,0 +1,8 @@
+@use '../global' as *;
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(20);
+    list-style: none;
+}

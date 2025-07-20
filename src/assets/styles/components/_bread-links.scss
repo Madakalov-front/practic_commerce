@@ -1,0 +1,45 @@
+@use "../global" as *;
+
+.bread-links {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(8);
+    font-size: toRem(10);
+    text-transform: uppercase;
+    letter-spacing: toRem(0.6);
+    position: absolute;
+    top: toRem(87);
+    left: toRem(24);
+    z-index: 10;
+    @include MQmin($tablet) {
+        top:toRem(136);
+        left: toRem(64);
+    }
+    a {
+        opacity: 0.3;
+        transition-property: opacity;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--ease);
+
+        @include MQmin($tablet-xl) {
+            color: var(--light);
+        }
+
+        &:not(:last-child) {
+            display: flex;
+            align-items: center;
+            column-gap: toRem(8);
+            &::after {
+                content: "";
+                width: toRem(3);
+                height: toRem(3);
+                background-color: var(--grey);
+                border-radius: 50%;
+                opacity: 0.3;
+            }
+        }
+        @include hover {
+            opacity: 1;
+        }
+    }
+}

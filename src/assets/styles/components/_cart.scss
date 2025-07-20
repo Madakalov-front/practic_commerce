@@ -1,0 +1,51 @@
+@use "../global" as *;
+
+.cart {
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0);
+            transition-property: opacity, visibility, transform;
+            transition-duration: var(--duration);
+            transition-timing-function: var(--ease);
+        }
+    }
+    svg {
+        opacity: 1;
+        visibility: visible;
+        transition-property: opacity, visibility;
+        transition-duration: var(--duration);
+        transition-timing-function: var(--ease);
+    }
+
+    &--has-product {
+        button {
+            &::after {
+                content: attr(data-count-product);
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: toRem(24);
+                height: toRem(24);
+                background-color: var(--green);
+                border-radius: 50%;
+                font-size: toRem(12);
+                font-weight: 500;
+                letter-spacing: toRem(0.72);
+                text-transform: uppercase;
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+            }
+        }
+        svg {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

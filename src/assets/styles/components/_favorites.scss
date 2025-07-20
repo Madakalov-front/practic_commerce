@@ -1,0 +1,7 @@
+@use "../global" as *;
+
+.favorites {
+    @include MQmax($tablet-xl) {
+        display: none;
+    }
+}

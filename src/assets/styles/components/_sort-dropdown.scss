@@ -1,0 +1,96 @@
+@use "../global" as *;
+
+.sorted-wrapper {
+    @include MQmax($tablet-xl) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: toRem(12);
+    }
+    button:not([class]) {
+        font-size: toRem(12);
+        font-weight: 500;
+        letter-spacing: toRem(0.72);
+        text-transform: uppercase;
+        @include MQmin($tablet-xl) {
+            display: none;
+        }
+    }
+}
+
+.sort-dropdown {
+    $self: &;
+    position: relative;
+
+    // .sort-dropdown__toggle
+    &__toggle {
+        font: inherit;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: toRem(4);
+        font-size: toRem(12);
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: toRem(0.72);
+        text-transform: uppercase;
+        transition: background 0.2s;
+        &:hover {
+            background: #e9e9e9;
+        }
+    }
+
+    // .sort-dropdown__arrow
+    &__arrow {
+        font-size: toRem(8);
+        transition: transform 0.2s;
+    }
+
+    // .sort-dropdown__menu
+    &__menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: toRem(280);
+        width: 100%;
+        background-color: var(--light);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(toRem(10));
+        transition: opacity 0.2s, transform 0.2s;
+        pointer-events: none;
+        z-index: 10;
+
+        li {
+            cursor: pointer;
+            padding-block: toRem(16);
+            padding-inline: toRem(24);
+            font-size: toRem(12);
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: toRem(0.72);
+            text-transform: uppercase;
+            transition: background 0.2s;
+
+            &:hover {
+                background: var(--green);
+            }
+        }
+    }
+
+    &.active {
+        #{$self}__menu {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        #{$self}__arrow {
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@use "../global" as *;
+
+.search {
+    @include MQmax($tablet-xl) {
+        display: none;
+    }
+}

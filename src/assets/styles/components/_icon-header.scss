@@ -1,0 +1,8 @@
+@use '../global' as *;
+
+.icon-header {
+    width: toRem(22);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    stroke: var(--dark);
+}

@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(24) toRem(15);
+    
+    @include MQmin($tablet-xl) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: toRem(16) toRem(24);
+    }
+    @include MQmin($laptop) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @include MQmax(374px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

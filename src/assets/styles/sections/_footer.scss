@@ -1,0 +1,6 @@
+@use '../global' as *;
+
+.footer {
+    height: clamp(toRem(120), 16.66vw, toRem(240));
+    background-color: var(--dark);
+}

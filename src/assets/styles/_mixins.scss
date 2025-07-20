@@ -1,0 +1,32 @@
+@mixin MQmin($breakpoint) {
+    @media (min-width: calc($breakpoint + 1px)) {
+        @content;
+    }
+}
+
+@mixin MQmax($breakpoint) {
+    @media (max-width: calc( $breakpoint - 0.02px)) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+}
+
+@mixin line-clamp($lines: 1, $overflow: ellipsis) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: $overflow;
+}

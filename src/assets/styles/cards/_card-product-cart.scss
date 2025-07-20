@@ -1,0 +1,106 @@
+@use "../global" as *;
+
+.card-product-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(8);
+    padding-bottom: toRem(12);
+    border-bottom: toRem(1) solid var(--dark-a10);
+    &--instock {
+        .card-product-cart__picture,
+        .card-product-cart__info,
+        .card-product-cart__counter {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        .card-product-cart__action {
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+    // .card-product-cart__picture
+
+    &__picture {
+        width: toRem(96);
+        aspect-ratio: 1;
+        flex-shrink: 0;
+        @include MQmax($tablet-xl) {
+            display: none;
+        }
+    }
+
+    // .card-product-cart__info
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(16);
+        max-width: toRem(165);
+        @include MQmin($tablet-xl) {
+            margin-right: toRem(2);
+        }
+        h5 {
+            font-size: toRem(16);
+            font-weight: 300;
+            line-height: 1.12;
+            letter-spacing: toRem(0.32);
+            @include line-clamp(2);
+        }
+    }
+
+    // .card-product-cart__counter
+
+    &__counter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: toRem(20);
+        flex-grow: 1;
+        button {
+            padding: toRem(4) toRem(12);
+            border-radius: toRem(4);
+            background-color: var(--grey-100);
+        }
+        svg {
+            width: toRem(16);
+            height: toRem(16);
+        }
+    }
+
+    // .card-product-cart__counter-minus
+
+    &__counter-minus {
+    }
+
+    // .card-product-cart__counter-plus
+
+    &__counter-plus {
+    }
+
+    // .card-product-cart__action
+
+    &__action {
+        @include hover {
+            svg {
+                opacity: 1;
+            }
+        }
+        svg {
+            width: toRem(24);
+            height: toRem(24);
+            opacity: 0.3;
+            transition: opacity var(--duration) var(--ease);
+        }
+    }
+
+    // .card-product-cart__delete
+
+    &__delete {
+    }
+
+    svg {
+        stroke: var(--dark);
+    }
+}

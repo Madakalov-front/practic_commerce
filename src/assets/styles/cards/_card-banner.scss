@@ -1,0 +1,32 @@
+@use "../global" as *;
+
+.card-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    row-gap: toRem(24);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    padding-block: toRem(75);
+    color: var(--light);
+  
+    h2, p {
+        max-width: toRem(472);
+        text-align: center;
+    }
+    h2 {
+        font-size: toRem(72);
+        font-weight: 400;
+        line-height: 0.88;
+        letter-spacing: toRem(-1.44);
+    }
+    p {
+        font-size: toRem(16);
+        font-weight: 500;
+        line-height: 1.3;
+        letter-spacing: toRem(.32);
+    }
+}

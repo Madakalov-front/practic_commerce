@@ -1,0 +1,79 @@
+@use "../global" as *;
+
+.header {
+    position: relative;
+    @include MQmax($tablet-xl) {
+        padding-bottom: toRem(74);
+    }
+    // .header__inner
+
+    &__inner {
+        padding-block: toRem(24);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include MQmin($tablet-xl) {
+            padding-block: toRem(36);
+            column-gap: clamp(toRem(20), 5.83vw, toRem(112));
+        }
+        @include MQmax($tablet-xl) {
+            border-bottom: toRem(1) solid var(--dark-a06);
+        }
+    }
+
+    // .header__contact
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        row-gap: toRem(2);
+        @include MQmax($tablet-xl) {
+            display: none;
+        }
+        a {
+            font-size: toRem(16);
+            font-weight: 500;
+            letter-spacing: toRem(-0.32);
+        }
+        button {
+            opacity: 0.3;
+            font-size: toRem(14);
+            text-align: left;
+            transition: opacity var(--duration) var(--ease);
+            @include hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    // .header__actions
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: toRem(24);
+    }
+
+    // .header__burger
+    &__burger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: toRem(24);
+        height: toRem(14);
+        @include MQmin($tablet-xl) {
+            display: none;
+        }
+        svg {
+            fill: currentColor;
+        }
+    }
+
+    // .header__banner
+    &__banner {
+        height: toRem(560);
+        @include MQmax($tablet-xl) {
+            display: none;
+        }
+    }
+}

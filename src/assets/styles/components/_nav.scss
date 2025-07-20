@@ -1,0 +1,51 @@
+@use "../global" as *;
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: toRem(24);
+    font-size: toRem(14);
+    text-transform: uppercase;
+    letter-spacing: toRem(0.84);
+    margin-right: auto;
+    @include MQmax($tablet-xl) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: toRem(24);
+        min-width: toRem(280);
+        max-width: toRem(320);
+        width: 100%;
+        min-height: 100vh;
+        height: 100%;
+        flex-direction: column;
+        background-color: #fff;
+        align-items: flex-start;
+        border-right: toRem(1) solid var(--dark-a06);
+        transform: translateX(-100%);
+        transition: transform  var(--duration) var(--ease);
+    }
+
+    &--show {
+        @include MQmax($tablet-xl) {
+            transform: translateX(0%);
+            z-index: 30;
+        }
+    }
+
+    // .nav__close
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: toRem(24);
+        height: toRem(24);
+        margin-left: auto;
+        @include MQmin($tablet-xl) {
+            display: none;
+        }
+        svg {
+            stroke: var(--dark);
+        }
+    }
+}

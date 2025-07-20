@@ -1,0 +1,99 @@
+@use "../global" as *;
+
+.catalog {
+    position: relative;
+    padding-block: toRem(48) toRem(30);
+    @include MQmin($tablet-xl) {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: toRem(24);
+        padding-top: toRem(72) toRem(125);
+    }
+    // .catalog__aside
+
+    &__aside {
+        @include MQmax($tablet-xl) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            min-height: toRem(318);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 5;
+            padding-block: toRem(12);
+            padding-inline: toRem(24);
+            background-color: var(--light);
+            border-top-left-radius: toRem(24);
+            border-top-right-radius: toRem(24);
+            transform: translateY(100%);
+            transition: transform var(--duration) var(--ease);
+            z-index: 10;
+        }
+        &--show {
+            @include MQmax($tablet-xl) {
+                transform: translateY(0%);
+            }
+        }
+        button {
+            display: block;
+            width: toRem(28);
+            height: toRem(4);
+            flex-shrink: 0;
+            margin-bottom: toRem(38);
+            border-radius: toRem(40);
+            background-color: var(--dark);
+            opacity: 0.6;
+            transition: oapcity var(--duration) var(--ease);
+            @include MQmin($tablet-xl) {
+                display: none;
+            }
+            @include hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    // .catalog__product
+
+    &__product {
+        @include MQmin($tablet-xl) {
+            grid-column: 2 / 7;
+        }
+    }
+
+    // .catalog__title
+
+    &__title {
+        font-size: toRem(36);
+        font-weight: 400;
+        line-height: 0.88;
+        letter-spacing: toRem(-1.44);
+        margin-bottom: toRem(48);
+        hyphens: auto;
+        @include MQmin($tablet-xl) {
+            display: none;
+        }
+    }
+
+    // .catalog__sorted
+
+    &__sorted {
+        margin-bottom: toRem(24);
+        @include MQmin($tablet-xl) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: toRem(12);
+            margin-bottom: toRem(44);
+        }
+    }
+}
+.category-list {
+}
+.category-checkbox {
+}
+
+.sorted-wrapper {
+}

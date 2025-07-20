@@ -1,0 +1,122 @@
+// @forward "../../../node_modules/reset-css/sass/reset";
+@forward "../../../node_modules/swiper/swiper-bundle.min.css";
+@use "./global" as *;
+
+// components
+@forward "./components/index-components";
+
+// cards
+@forward "./cards/index-cards";
+
+// swipers
+@forward "./swipers/index-swipers";
+
+// blocks
+@forward "./blocks/index-blocks";
+
+// sections
+@forward "./sections//index-sections";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html {
+    text-size-adjust: 100%;
+    font-size: 16px;
+    @include MQmin($tablet-xl) {
+        font-size: 0.83333vw;
+    }
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+    min-height: 100vh;
+    color: var(--dark);
+    line-height: 1;
+    font-family: "Inter", sans-serif;
+    &:has([class*="--show"], .active) {
+        overflow: hidden;
+        touch-action: none;
+        .body-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+button,
+input {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: toRem(1920);
+    width: 100%;
+    padding-inline: toRem(24);
+    @include MQmin($tablet) {
+        padding-inline: toRem(64);
+    }
+}
+
+.body-overlay  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-a70);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--ease);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
